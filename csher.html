@@ -1,0 +1,164 @@
+
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>لوحة الكاشير  ☕</title>
+    <script src="https://cdn.socket.io/4.8.0/socket.io.min.js"></script>
+    <link rel="stylesheet" href="style_csher.css">
+</head>
+<body>
+    <!-- زر إضافة طلب جديد -->
+    <button class="add-order-btn" onclick="openOrderModal()">+</button>
+
+    <!-- Modal واحد فقط ✅ -->
+    <div class="modal-overlay" id="orderModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>➕ إضافة طلب جديد</h2>
+                <button class="close-modal" onclick="closeOrderModal()">×</button>
+            </div>
+            
+            <form id="orderForm" onsubmit="addNewOrder(event)">
+                <div class="form-group">
+                    <label class="form-label">🔢 رقم الطلب</label>
+                    <input type="text" class="form-input" id="manualOrderId" 
+                           placeholder="أدخل رقم الطلب (مثال: 1)" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">👤 اسم العميل</label>
+                        <input type="text" class="form-input" id="customerName" 
+                               placeholder="أدخل اسم العميل" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">📞 رقم الهاتف</label>
+                        <input type="tel" class="form-input" id="customerPhone" 
+                               placeholder="مثال: 0123456789" required>
+                    </div>
+                </div>
+                
+                <!-- ✅ حقل الطاولة - واحد فقط -->
+                <div class="form-group">
+                    <label class="form-label">🪑 رقم الطاولة</label>
+                    <input type="text" class="form-input" id="customer_table" 
+                           placeholder="أدخل رقم الطاولة (مثال: 1، 2، A1، VIP)" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">📝 عناصر الطلب (مفصولة بفواصل)</label>
+                    <input type="text" class="form-input" id="orderItems" 
+                           placeholder="مثال: لاتيه ×2, كابتشينو ×1, كرواسون ×2" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">💰 المبلغ الإجمالي</label>
+                    <input type="number" class="form-input" id="orderTotal" 
+                           placeholder="أدخل المبلغ بالجنية" required step="0.01">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">📌 ملاحظات خاصة</label>
+                    <textarea class="form-textarea" id="orderNotes" 
+                              placeholder="ملاحظات خاصة للطلب... مثل:
+• بدون سكر
+• تزيين إضافي
+• تحضير سريع
+• أي طلبات خاصة"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">✅ حفظ الطلب وإضافته</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>☕ لوحة تحكم الكافيه</h1>
+        <p>نظام إدارة الطلبات والمبيعات في الوقت الحقيقي</p>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+        <button class="btn-control active" id="stats-btn" onclick="toggleStats()">📊 الإحصائيات</button>
+        <button class="btn-control" onclick="exportData()">📥 تصدير Excel</button>
+        <button class="btn-control" onclick="clearStorage()">🗑️ مسح البيانات</button>
+        <button class="btn-control" onclick="refreshData()">🔄 تحديث</button>
+    </div>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Stats Section -->
+        <div class="stats-section" id="stats-panel">
+            <h2 class="section-title">📊 إحصائيات المبيعات</h2>
+            <div class="stats-grid">
+                <div class="stat-card today-sales">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-value" id="today-sales">0 ج.م</div>
+                    <div class="stat-label">مبيعات اليوم</div>
+                </div>
+                <div class="stat-card total-orders">
+                    <div class="stat-icon">📦</div>
+                    <div class="stat-value" id="total-orders">0</div>
+                    <div class="stat-label">إجمالي الطلبات</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-value" id="new-customers">0</div>
+                    <div class="stat-label">عملاء جدد</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📝</div>
+                    <div class="stat-value" id="orders-with-notes">0</div>
+                    <div class="stat-label">طلبات بملاحظات</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Orders Table Section -->
+        <div class="orders-section">
+            <h2 class="section-title">📋 الطلبات الأخيرة</h2>
+            <div class="time-filter">
+                <button class="time-btn active" onclick="filterOrders('today')">اليوم</button>
+                <button class="time-btn" onclick="filterOrders('week')">الأسبوع</button>
+                <button class="time-btn" onclick="filterOrders('month')">الشهر</button>
+                <button class="time-btn" onclick="filterOrders('all')">الكل</button>
+            </div> 
+            
+            <div class="table-container">
+                <table class="orders-table">
+                    <thead>
+                        <tr>
+                            <th>الوقت</th>
+                            <th>العميل</th>
+                            <th>الهاتف</th>
+                            <th>الطاولة</th>
+                            <th>المبلغ</th>
+                            <th>الحالة</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recent-orders">
+                        <!-- سيتم ملؤها ديناميكياً -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Current Orders Section -->
+    <div class="current-orders-section">
+        <h2 class="section-title">🔄 الطلبات الجارية الآن</h2>
+        <div class="orders-grid" id="orders-container">
+            <div class="empty-state" id="empty-state">
+                <div class="icon">☕</div>
+                لا توجد طلبات جارية حالياً<br>
+                <small style="font-size: 1.1em; opacity: 0.8;">الطلبات الجديدة ستظهر هنا تلقائياً</small>
+            </div>
+        </div>
+    </div>
+
+<script src="paper.js"></script>
+</body>
+</html>

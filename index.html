@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K cafe  ☕</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="nav-logo">☕ <i>K cafe</i></a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1><i>K cafe</i></h1>
+            <p><i>​Where Tradition Comes to Life</i></p>
+            <a href="#menu" class="cta-btn"><i>View Menu</i></a>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <h2>Hot Drinks</h2>
+        <div class="menu-grid">
+            <div class="menu-item" data-name="Tea" data-price="10">
+                <img src="https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?auto=format&fit=crop&w=600&q=80" alt="Tea">
+                <h3>Tea</h3>
+                <p class="description">Classic hot tea</p>
+                <span class="price">10 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Green Tea" data-price="15">
+                <img src="https://images.unsplash.com/photo-1627435601361-ec25f5b1d0e5?auto=format&fit=crop&w=600&q=80" alt="Green Tea">
+                <h3>Green Tea</h3>
+                <p class="description">Healthy and refreshing</p>
+                <span class="price">15 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item" data-name="Turkish Coffee" data-price="20">
+                <img src="https://images.unsplash.com/photo-1599320659692-a1b7e4524276?auto=format&fit=crop&w=600&q=80" alt="Turkish Coffee">
+                <h3>Turkish Coffee</h3>
+                <p class="description">Traditional Turkish style</p>
+                <span class="price">20 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Espresso Single" data-price="25">
+                <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=600&q=80" alt="Espresso">
+                <h3>Espresso Single</h3>
+                <p class="description">Rich and intense shot</p>
+                <span class="price">25 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="menu-item featured" data-name="Cappuccino" data-price="35">
+                <div class="featured-badge">Best Seller</div>
+                <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&q=80" alt="Cappuccino">
+                <h3>Cappuccino</h3>
+                <p class="description">Espresso with steamed milk foam</p>
+                <span class="price">35 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Latte" data-price="35">
+                <img src="https://images.unsplash.com/photo-1561047029-3000c68339ca?auto=format&fit=crop&w=600&q=80" alt="Latte">
+                <h3>Latte</h3>
+                <p class="description">Smooth milky coffee</p>
+                <span class="price">35 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Hot Chocolate" data-price="40">
+                <img src="https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&w=600&q=80" alt="Hot Chocolate">
+                <h3>Hot Chocolate</h3>
+                <p class="description">Sweet and warm chocolate drink</p>
+                <span class="price">40 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Hazelnut Coffee" data-price="35">
+                <img src="https://images.unsplash.com/photo-1621221768656-b072c4784a0d?auto=format&fit=crop&w=600&q=80" alt="Hazelnut Coffee">
+                <h3>Hazelnut Coffee</h3>
+                <p class="description">Coffee with rich hazelnut flavor</p>
+                <span class="price">35 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="menu" class="menu-section">
+        <h2>Cold Coffee</h2>
+        <div class="menu-grid">
+            <div class="menu-item" data-name="Iced American" data-price="40">
+                <img src="https://images.unsplash.com/photo-1517701604599-bb29b5c7dd90?auto=format&fit=crop&w=600&q=80" alt="Iced American">
+                <h3>Iced American</h3>
+                <p class="description">Chilled black coffee</p>
+                <span class="price">40 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item featured" data-name="Iced Latte" data-price="45">
+                <div class="featured-badge">Popular</div>
+                <img src="https://images.unsplash.com/photo-1553909489-cd47e3b4430f?auto=format&fit=crop&w=600&q=80" alt="Iced Latte">
+                <h3>Iced Latte</h3>
+                <p class="description">Espresso with cold milk and ice</p>
+                <span class="price">45 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Iced Mocha" data-price="50">
+                <img src="https://images.unsplash.com/photo-1563499119105-01e30d1702f7?auto=format&fit=crop&w=600&q=80" alt="Iced Mocha">
+                <h3>Iced Mocha</h3>
+                <p class="description">Chocolate flavored iced coffee</p>
+                <span class="price">50 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Iced Spanish" data-price="55">
+                <img src="https://images.unsplash.com/photo-1461023058943-48db33005409?auto=format&fit=crop&w=600&q=80" alt="Iced Spanish">
+                <h3>Iced Spanish</h3>
+                <p class="description">Sweet creamy iced coffee</p>
+                <span class="price">55 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item" data-name="Frappuccino" data-price="55">
+                <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80" alt="Frappuccino">
+                <h3>Frappuccino</h3>
+                <p class="description">Blended ice coffee drink</p>
+                <span class="price">55 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="menu" class="menu-section">
+        <h2>Frappe</h2>
+        <div class="menu-grid">
+            <div class="menu-item" data-name="Vanilla Frappe" data-price="50">
+                <img src="https://images.unsplash.com/photo-1577805947697-b98438db2647?auto=format&fit=crop&w=600&q=80" alt="Vanilla Frappe">
+                <h3>Vanilla Frappe</h3>
+                <p class="description">Classic vanilla blended drink</p>
+                <span class="price">50 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item" data-name="Chocolate Frappe" data-price="50">
+                <img src="https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?auto=format&fit=crop&w=600&q=80" alt="Chocolate Frappe">
+                <h3>Chocolate Frappe</h3>
+                <p class="description">Rich chocolate blend</p>
+                <span class="price">50 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Caramel Frappe" data-price="50">
+                <img src="https://images.unsplash.com/photo-1619672626960-4c74824a750c?auto=format&fit=crop&w=600&q=80" alt="Caramel Frappe">
+                <h3>Caramel Frappe</h3>
+                <p class="description">Sweet caramel delight</p>
+                <span class="price">50 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Oreo Frappe" data-price="55">
+                <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80" alt="Oreo Frappe">
+                <h3>Oreo Frappe</h3>
+                <p class="description">Blended with Oreo cookies</p>
+                <span class="price">55 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item" data-name="Lotus Frappe" data-price="60">
+                <img src="https://images.unsplash.com/photo-1598285513523-863df7711200?auto=format&fit=crop&w=600&q=80" alt="Lotus Frappe">
+                <h3>Lotus Frappe</h3>
+                <p class="description">Distinctive Lotus Biscoff taste</p>
+                <span class="price">60 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="menu" class="menu-section">
+        <h2>Shakes</h2>
+        <div class="menu-grid">
+            <div class="menu-item" data-name="Vanilla Milkshake" data-price="50">
+                <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80" alt="Vanilla Milkshake">
+                <h3>Vanilla Milkshake</h3>
+                <p class="description">Creamy vanilla shake</p>
+                <span class="price">50 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item" data-name="Chocolate Milkshake" data-price="50">
+                <img src="https://images.unsplash.com/photo-1579954115563-e72bf1381629?auto=format&fit=crop&w=600&q=80" alt="Chocolate Milkshake">
+                <h3>Chocolate Milkshake</h3>
+                <p class="description">Rich chocolate shake</p>
+                <span class="price">50 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Strawberry Milkshake" data-price="50">
+                <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80" alt="Strawberry Milkshake">
+                <h3>Strawberry Milkshake</h3>
+                <p class="description">Fresh strawberry blend</p>
+                <span class="price">50 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Oreo Milkshake" data-price="55">
+                <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80" alt="Oreo Milkshake">
+                <h3>Oreo Milkshake</h3>
+                <p class="description">Oreo lovers favorite</p>
+                <span class="price">55 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item" data-name="KitKat Milkshake" data-price="60">
+                <img src="https://images.unsplash.com/photo-1553177595-4de2bb0842b9?auto=format&fit=crop&w=600&q=80" alt="KitKat Milkshake">
+                <h3>KitKat Milkshake</h3>
+                <p class="description">Shake with KitKat bars</p>
+                <span class="price">60 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Snickers Milkshake" data-price="60">
+                <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80" alt="Snickers Milkshake">
+                <h3>Snickers Milkshake</h3>
+                <p class="description">Peanut and caramel taste</p>
+                <span class="price">60 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="menu" class="menu-section">
+        <h2>Ice Cream</h2>
+        <div class="menu-grid">
+            <div class="menu-item" data-name="Vanilla Ice Cream" data-price="25">
+                <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=600&q=80" alt="Vanilla Ice Cream">
+                <h3>Vanilla Ice Cream</h3>
+                <p class="description">Classic scoop</p>
+                <span class="price">25 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item" data-name="Chocolate Ice Cream" data-price="25">
+                <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?auto=format&fit=crop&w=600&q=80" alt="Chocolate Ice Cream">
+                <h3>Chocolate Ice Cream</h3>
+                <p class="description">Rich chocolate scoop</p>
+                <span class="price">25 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Mango Ice Cream" data-price="25">
+                <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80" alt="Mango Ice Cream">
+                <h3>Mango Ice Cream</h3>
+                <p class="description">Tropical mango flavor</p>
+                <span class="price">25 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Oreo Ice Cream" data-price="30">
+                <img src="https://images.unsplash.com/photo-1488900128323-21503983a07e?auto=format&fit=crop&w=600&q=80" alt="Oreo Ice Cream">
+                <h3>Oreo Ice Cream</h3>
+                <p class="description">Ice cream with crushed Oreo</p>
+                <span class="price">30 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item" data-name="Lotus Ice Cream" data-price="35">
+                <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="Lotus Ice Cream">
+                <h3>Lotus Ice Cream</h3>
+                <p class="description">Premium Lotus flavor</p>
+                <span class="price">35 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="menu" class="menu-section">
+        <h2>Smoothie & Juice</h2>
+        <div class="menu-grid">
+            <div class="menu-item" data-name="Orange Juice" data-price="30">
+                <img src="https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?auto=format&fit=crop&w=600&q=80" alt="Orange Juice">
+                <h3>Orange Juice</h3>
+                <p class="description">Freshly squeezed orange</p>
+                <span class="price">30 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item" data-name="Lemon Mint Juice" data-price="35">
+                <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80" alt="Lemon Mint">
+                <h3>Lemon Mint Juice</h3>
+                <p class="description">Refreshing lemon with mint</p>
+                <span class="price">35 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Mango Juice" data-price="40">
+                <img src="https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?auto=format&fit=crop&w=600&q=80" alt="Mango Juice">
+                <h3>Mango Juice</h3>
+                <p class="description">Rich natural mango</p>
+                <span class="price">40 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Watermelon Smoothie" data-price="50">
+                <img src="https://images.unsplash.com/photo-1589733955941-5eeaf752f6dd?auto=format&fit=crop&w=600&q=80" alt="Watermelon Smoothie">
+                <h3>Watermelon Smoothie</h3>
+                <p class="description">Icy fresh watermelon</p>
+                <span class="price">50 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item" data-name="Lemon Smoothie" data-price="40">
+                <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80" alt="Lemon Smoothie">
+                <h3>Lemon Smoothie</h3>
+                <p class="description">Zesty and cold</p>
+                <span class="price">40 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            
+             <div class="menu-item" data-name="Kiwi Smoothie" data-price="60">
+                <img src="https://images.unsplash.com/photo-1618536568000-98f18d70d44b?auto=format&fit=crop&w=600&q=80" alt="Kiwi Smoothie">
+                <h3>Kiwi Smoothie</h3>
+                <p class="description">Fresh kiwi blend</p>
+                <span class="price">60 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="menu" class="menu-section">
+        <h2>CockTails</h2>
+        <div class="menu-grid">
+            <div class="menu-item" data-name="Sunshine" data-price="50">
+                <img src="https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?auto=format&fit=crop&w=600&q=80" alt="Sunshine">
+                <h3>Sunshine</h3>
+                <p class="description">Refreshing mix</p>
+                <span class="price">50 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item" data-name="Mojito" data-price="50">
+                <img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32d?auto=format&fit=crop&w=600&q=80" alt="Mojito">
+                <h3>Mojito</h3>
+                <p class="description">Classic lime and mint soda</p>
+                <span class="price">50 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Ocean Blue" data-price="50">
+                <img src="https://images.unsplash.com/photo-1629247659695-46b539a2b846?auto=format&fit=crop&w=600&q=80" alt="Ocean Blue">
+                <h3>Ocean Blue</h3>
+                <p class="description">Blue lagoon style drink</p>
+                <span class="price">50 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Florida" data-price="60">
+                <img src="https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?auto=format&fit=crop&w=600&q=80" alt="Florida">
+                <h3>Florida</h3>
+                <p class="description">Fruity cocktail</p>
+                <span class="price">60 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item" data-name="Red Bull Flavor" data-price="65">
+                <img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32d?auto=format&fit=crop&w=600&q=80" alt="Red Bull Flavor">
+                <h3>Red Bull Flavor</h3>
+                <p class="description">Energizing drink with flavor</p>
+                <span class="price">65 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="menu" class="menu-section">
+        <h2>Extra</h2>
+        <div class="menu-grid">
+            <div class="menu-item" data-name="Extra Milk" data-price="10">
+                <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=600&q=80" alt="Milk">
+                <h3>Extra Milk</h3>
+                <p class="description">Add milk to your drink</p>
+                <span class="price">10 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item" data-name="Flavor Shot" data-price="10">
+                <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&q=80" alt="Flavor">
+                <h3>Flavor Shot</h3>
+                <p class="description">Add your favorite syrup</p>
+                <span class="price">10 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Whip Cream" data-price="15">
+                <img src="https://images.unsplash.com/photo-1563503209-66173007421c?auto=format&fit=crop&w=600&q=80" alt="Cream">
+                <h3>Whip Cream</h3>
+                <p class="description">Delicious topping</p>
+                <span class="price">15 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Nuts" data-price="15">
+                <img src="https://images.unsplash.com/photo-1525287515328-3e4b7c6d6635?auto=format&fit=crop&w=600&q=80" alt="Nuts">
+                <h3>Nuts</h3>
+                <p class="description">Crunchy addition</p>
+                <span class="price">15 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            
+             <div class="menu-item" data-name="Honey" data-price="10">
+                <img src="https://images.unsplash.com/photo-1587049352851-8d4e89186eff?auto=format&fit=crop&w=600&q=80" alt="Honey">
+                <h3>Honey</h3>
+                <p class="description">Natural sweetener</p>
+                <span class="price">10 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="menu" class="menu-section">
+        <h2>Soft Drinks</h2>
+        <div class="menu-grid">
+            <div class="menu-item" data-name="Water Small" data-price="7">
+                <img src="https://images.unsplash.com/photo-1564419320461-6870880221ad?auto=format&fit=crop&w=600&q=80" alt="Water Small">
+                <h3>Water Small</h3>
+                <p class="description">Mineral water (Small)</p>
+                <span class="price">7 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item" data-name="Water Big" data-price="10">
+                <img src="https://images.unsplash.com/photo-1564419320461-6870880221ad?auto=format&fit=crop&w=600&q=80" alt="Water Big">
+                <h3>Water Big</h3>
+                <p class="description">Mineral water (Big)</p>
+                <span class="price">10 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Pepsi" data-price="15">
+                <img src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&w=600&q=80" alt="Pepsi">
+                <h3>Pepsi</h3>
+                <p class="description">Chilled soda</p>
+                <span class="price">15 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Fayrouz" data-price="20">
+                <img src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&w=600&q=80" alt="Fayrouz">
+                <h3>Fayrouz</h3>
+                <p class="description">Malt drink</p>
+                <span class="price">20 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item" data-name="Red Bull" data-price="50">
+                <img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32d?auto=format&fit=crop&w=600&q=80" alt="Red Bull">
+                <h3>Red Bull</h3>
+                <p class="description">Energy Drink</p>
+                <span class="price">50 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item" data-name="Schweppes" data-price="25">
+                <img src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&w=600&q=80" alt="Schweppes">
+                <h3>Schweppes</h3>
+                <p class="description">Sparkling drink</p>
+                <span class="price">25 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="menu" class="menu-section">
+        <h2>SHISHA</h2>
+        <div class="menu-grid">
+            <div class="menu-item" data-name="Salloom" data-price="25">
+                <img src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=600&q=80" alt="Salloom">
+                <h3>Salloom</h3>
+                <p class="description">Classic flavor</p>
+                <span class="price">25 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item" data-name="Qass" data-price="30">
+                <img src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=600&q=80" alt="Qass">
+                <h3>Qass</h3>
+                <p class="description">Traditional</p>
+                <span class="price">30 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Meassel" data-price="35">
+                <img src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=600&q=80" alt="Meassel">
+                <h3>Meassel</h3>
+                <p class="description">Mixed flavors</p>
+                <span class="price">35 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Al Fakher" data-price="50">
+                <img src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=600&q=80" alt="Al Fakher">
+                <h3>Al Fakher</h3>
+                <p class="description">Premium tobacco</p>
+                <span class="price">50 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item" data-name="Special" data-price="70">
+                <img src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=600&q=80" alt="Special">
+                <h3>Special</h3>
+                <p class="description">House special mix</p>
+                <span class="price">70 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item" data-name="Lay" data-price="10">
+                <img src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=600&q=80" alt="Lay">
+                <h3>Lay</h3>
+                <p class="description">Disposable hose</p>
+                <span class="price">10 LE</span>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="order-section">
+        <h2>سلة الطلبات</h2>
+        <div class="cart-container">
+            <div class="cart-items" id="cart-items">
+                <div class="cart-empty">
+                    <p>السلة فارغة، أضف مشروبات من القائمة</p>
+                </div>
+            </div>
+            <div class="cart-summary">
+                <h3>إجمالي الطلب: <span id="total-price">0</span> جنيه</h3>
+                <div class="total">
+                    <span>الإجمالي:</span>
+                    <span id="final-total">0 جنيه</span>
+                </div>
+                <form id="order-form" class="order-form">
+                    <input type="text" name="customer_name" placeholder="الاسم بالكامل" required>
+                    <input type="tel" name="customer_phone" placeholder="رقم الهاتف" required>
+                    <input type="text" name="customer_table" placeholder="رقم الطاولة" required>
+                    <input type="hidden" name="order_details" id="order-details">
+                    <button type="submit">إرسال الطلب للكاشير</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <p>قهوة مميزة ☕ | جميع الحقوق محفوظة &copy; 2023</p>
+            <p>ساعات العمل: من 8 صباحاً إلى 12 منتصف الليل</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+<button class="floating-order-btn" id="floating-order-btn">
+    <i class="fas fa-shopping-cart"></i>
+    <span class="badge" id="cart-badge">0</span>
+</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
