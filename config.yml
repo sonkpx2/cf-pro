@@ -1,0 +1,22 @@
+# ملف _config.yml
+title: Coffee Shop System
+description: نظام إدارة المقاهي
+baseurl: ""
+url: ""
+
+# استبعاد الملفات من المعالجة
+exclude:
+  - backend/
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - server.js
+  - README.md
+  - .gitignore
+  - .github/
+
+# إعدادات Jekyll
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
