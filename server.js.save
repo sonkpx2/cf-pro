@@ -1,0 +1,49 @@
+const express = require('express');
+const http = require('http');
+const socketIo = require('socket.io');
+const path = require('path');
+
+const app = express();
+const server = http.createServer(app);
+const io = socketIo(server, {
+  cors: { origin: "*" }
+});
+
+app.use(express.static('public'));
+app.use(express.json());
+
+let orders = [];
+let orderCounter = 1;
+
+io.on('connection', (socket) => {
+  console.log('👤 Client connected:', socket.id);
+  
+  socket.emit('orders', orders);
+  
+  socket.on('newOrder', (orderData) => {
+    const order = {
+      id: orderCounter++,
+      ...orderData,
+      status: 'waiting',
+      timestamp: new Date().toLocaleString()
+    };
+    orders.unshift(order);
+    io.emit('ordersUpdate', orders);
+    console.log('🆕 New order:', order.id);
+  });
+  
+  socket.on('completeOrder', (orderId) => {
+    const orderIndex = orders.findIndex(o => o.id == orderId);
+    if (orderIndex !== -1) {
+      orders[orderIndex].status = 'completed';
+      io.emit('ordersUpdate', orders);
+      console.log('✅ Order completed:', orderId);
+    }
+  });
+});
+
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+  console.log(`🌐 Server running on http://localhost:${PORT}`);
+  console.log('📱 Open: http://localhost:3000');
+});
